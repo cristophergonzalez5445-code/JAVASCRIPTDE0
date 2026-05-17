@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+
+    <link rel="stylesheet" href="styls.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>Password Generator</h1>
+
+        <!-- Caja donde aparece la contraseña -->
+        <div class="password-box">
+            <input type="text" id="password" readonly>
+            <button id="copiarBtn">📋</button>
+        </div>
+
+        <!-- Configuración -->
+        <div class="configuracion">
+
+            <div class="longitud">
+                <label>
+                    Character Length:
+                    <span id="longitudValor">8</span>
+                </label>
+
+                <input 
+                    type="range" 
+                    id="longitud" 
+                    min="8" 
+                    max="30" 
+                    value="8"
+                >
+            </div>
+
+            <!-- Opciones -->
+            <div class="opciones">
+                <label>
+                    <input type="checkbox" id="mayusculas">
+                    Include Uppercase Letters
+                </label>
+
+                <label>
+                    <input type="checkbox" id="minusculas" checked>
+                    Include Lowercase Letters
+                </label>
+
+                <label>
+                    <input type="checkbox" id="numeros" checked>
+                    Include Numbers
+                </label>
+
+                <label>
+                    <input type="checkbox" id="simbolos">
+                    Include Symbols
+                </label>
+            </div>
+
+            <!-- Seguridad -->
+            <div class="strength">
+                <span>STRENGTH</span>
+                <p id="nivelSeguridad">MEDIA</p>
+            </div>
+
+            <!-- Botón -->
+            <button id="generarBtn" class="generarBtn">
+                GENERATE →
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="scriptt.js"></script>
+
+</body>
+</html>
